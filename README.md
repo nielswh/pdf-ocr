@@ -71,10 +71,8 @@ cp "./share/configs/alphanumeric" "/usr/share/tesseract-ocr/tessdata/configs/alp
 ```
 
 ### Windows
-Important! You will have to add some variables to the PATH of your machine. You do this by right clicking your computer in file explorer, select Properties, select Advanced System Settings, Environment Variables. You can then add **the folder that contains the executables** to the path variable.
 
 **pdftk** can be installed using the PDFtk Server installer found here: https://www.pdflabs.com/tools/pdftk-server/
-It should autmatically add itself to the PATH, if not, the default install location is *"C:\Program Files (x86)\PDFtk Server\bin\"*
 
 **ghostscript** for Windows can be found at: http://www.ghostscript.com/download/gsdnld.html
 - Make sure you download the General Public License and the correct version (32/64bit).
@@ -83,6 +81,6 @@ It should autmatically add itself to the PATH, if not, the default install locat
 
 - Rename the *gswin64c* to *gs*, and add the bin folder to your PATH.
 
-**tesseract** can be build, but you can also download an older version which seems to work fine. Downloads at: https://sourceforge.net/projects/tesseract-ocr-alt/files/
-Version tested is *tesseract-ocr-setup-3.02.02.exe*, the default install location is *"C:\Program Files (x86)\Tesseract-OCR"* and is also added to the PATH.
-Note, this is only when you've checked that it will install for everyone on the machine.
+**tesseract** can be build, but you can also download an older version which seems to work fine. 
+- Download at: https://sourceforge.net/projects/tesseract-ocr-alt/files/
+- Version I know works is *tesseract-ocr-setup-3.02.02.exe*
