@@ -1,29 +1,29 @@
 # pdf-ocr
-node module that will do OCR on PDFs that do not contain text
+node module that will do OCR on PDFs that do not contain searchable text.
 
 ## Inspired from pdf-extract
 [https://www.npmjs.com/package/pdf-extract] by Noah Isaacson.  Many of the ideas initial design are from this project.
 
 ## Difference from pdf-extract
-- Uses ES6 javascript
-- using Promises instead of callbacks
-- allows for extracting only the first page of the PDF to OCR (primary reason this was written for my own selfish reason!)
-- does not do searchable PDFs.  Primary reason was it was next to impossible to get poppler instead on Windows. In the future I may add this
-- if you need searchable PDFs, then I recommend using pdf-extract.
+- Uses ES6 javascript syntax.
+- Uses Promises instead of callbacks
+- Option to OCR just the first page of the PDF. (primary reason this was written for my own selfish reason!)
+- Currently does not OCR searchable PDFs.  Plenty of options out there that does this.
+- If you need to OCR searchable PDFs, I recommend using pdf-extract instead.
 
 ## Installation
 
 `npm install pdf-ocr --save` 
 
-After the installed, the following binaries need to be on in the path in order for the module to work.
+After installing, the following binaries list below will need to be on your system as well as in the paths in your environment settings.
 
 ### OSX
 
 **pdftk**
 [http://www.pdflabs.com/docs/install-pdftk/](http://www.pdflabs.com/docs/install-pdftk/)
 
-- If you are installing on Siera or High Siera, you'll need to make sure you grab pdftk_server-2.02-mac_osx-10.11-setup.pkg
-- Other versions, seemed to hang and not return any results.
+- If you're installing on OSX Sierra or High Sierra, you'll need to make sure you use pdftk_server-2.02-mac_osx-10.11-setup.pkg
+- Other versions, seemed to hang the process.  If the tests fail, this could the main reason why.
 
 **ghostscript**
 ``` bash
@@ -63,7 +63,8 @@ apt-get install ghostscript
 apt-get install tesseract-ocr
 ```
 
-For the OCR to work, you need to have the tesseract-ocr binaries available on your path. If you only need to handle ASCII characters, the accuracy of the OCR process can be increased by limiting the tesseract output. To do this copy the *alphanumeric* file included with this pdf-extract module into the *tess-data* folder on your system. Also the eng.traineddata included with the standard tesseract-ocr package is out of date. This pdf-extract module provides an up-to-date version which you should copy into the appropriate location on your system
+For the OCR to work, you need to have the tesseract-ocr binaries available on your path. If you only need to handle ASCII characters, the accuracy of the OCR process can be increased by limiting the tesseract output. To do this copy the *alphanumeric* file included with this module into the *tess-data* folder on your system. Also the eng.traineddata included with the standard tesseract-ocr package is out of date. This module provides an up-to-date version which you should copy into the appropriate location on your system.
+
 ``` bash
 cd <root of this module>
 cp "./share/eng.traineddata" "/usr/share/tesseract-ocr/tessdata/eng.traineddata"
@@ -81,6 +82,7 @@ cp "./share/configs/alphanumeric" "/usr/share/tesseract-ocr/tessdata/configs/alp
 
 - Rename the *gswin64c* to *gs*, and add the bin folder to your PATH.
 
-**tesseract** can be build, but you can also download an older version which seems to work fine. 
-- Download at: https://sourceforge.net/projects/tesseract-ocr-alt/files/
-- Version I know works is *tesseract-ocr-setup-3.02.02.exe*
+**tesseract**
+- Download at: [https://sourceforge.net/projects/tesseract-ocr-alt/files/](https://sourceforge.net/projects/tesseract-ocr-alt/files/)
+
+- *tesseract-ocr-setup-3.02.02.exe* is a version that I know works.
