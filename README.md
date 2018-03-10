@@ -1,8 +1,8 @@
 # pdf-ocr
 node module that will do OCR on PDFs that do not contain searchable text.
 
-## Inspired from pdf-extract
-[https://www.npmjs.com/package/pdf-extract] by Noah Isaacson.  Many of the ideas initial design are from this project.
+## Forked from pdf-extract
+[https://www.npmjs.com/package/pdf-extract] by Noah Isaacson.
 
 ## Differences between pdf-ocr and pdf-extract
 - pdf-extract instructions were outdated when it came to installing dependant binaries. I ran into a couple of pitfalls and wanted to make sure others did not if they used this version.
