@@ -1,14 +1,14 @@
 {
-  "name": "pdf-ocr",
+  "name": "@salembeats/pdf-ocr-fork",
   "version": "0.1.0",
-  "description": "node module that can ocr pdfs that are not searchable",
+  "description": "Parse image-based PDF documents.",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/mocha --reporter spec"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nielswh/pdf-ocr.git"
+    "url": "git+https://github.com/salembeats/pdf-ocr.git"
   },
   "folders": "lib",
   "dependencies": {
@@ -26,10 +26,10 @@
     "pdf",
     "ocr"
   ],
-  "author": "Niels Hansen",
+  "author": "Cuyler Stuwe",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nielswh/pdf-ocr/issues"
+    "url": "https://github.com/salembeats/pdf-ocr/pulls"
   },
-  "homepage": "https://github.com/nielswh/pdf-ocr#readme"
+  "homepage": "https://github.com/salembeats/pdf-ocr#pdf-ocr"
 }
